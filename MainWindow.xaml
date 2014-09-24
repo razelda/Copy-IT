@@ -1,0 +1,93 @@
+<Window xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  x:Class="Copy_IT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Copy IT" 
+        Background="#ffe6e6e6" xmlns:local ="clr-namespace:Copy_IT"  x:Name="Window" Height="474" Width="754" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+    <Window.Resources>
+
+        <local:ExpandedConverter x:Key="ExspandedConerter"/>
+
+        <DataTemplate x:Key="DataTemplate1">
+            <Expander Header="{Binding Header}" Content="{Binding Content}">
+                <Expander.Resources>
+                    <local:ExpandedMultiConverter x:Key="ExpandedMultiConverter"/>
+                </Expander.Resources>
+                <Expander.IsExpanded>
+                    <MultiBinding Converter="{StaticResource ExpandedMultiConverter}">
+                        <Binding Path="CurrentExpanded3" Mode="TwoWay" ElementName="Window"/>
+                        <Binding Path="ItemId" Mode="OneWay" />
+                    </MultiBinding>
+                </Expander.IsExpanded>
+            </Expander>
+        </DataTemplate>
+
+    </Window.Resources>
+
+
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Width="195" VerticalAlignment="Center">
+
+            <Expander Style="{StaticResource ExpanderStyle1}" Header="Folder Locations"  IsExpanded="{Binding CurrentExpanded2, Converter={StaticResource ExspandedConerter}, ConverterParameter=1}">
+                <Grid Background="#FFE5E5E5" Height="97">
+                    <TextBlock HorizontalAlignment="Left" Margin="15,0,0,0" TextWrapping="Wrap" Text="Source Directory: " Width="137" Height="19" VerticalAlignment="Top"/>
+                    <TextBox x:Name="TB_SorceDir"  Height="22" Margin="15,19,41,0" VerticalAlignment="Top"/>
+                    <Button x:Name="BT_Sorce" Content="..." HorizontalAlignment="Left" Margin="157,19,0,0" VerticalAlignment="Top" Width="26" Click="BT_Sorce_Click"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="15,44,0,0" TextWrapping="Wrap" Text="Destanation Directory: " Width="137" Height="19" VerticalAlignment="Top"/>
+                    <TextBox x:Name="TB_DestDir" HorizontalAlignment="Left" Height="22" Margin="15,63,0,0" VerticalAlignment="Top" Width="137"/>
+                    <Button x:Name="BT_Dest" Content="..." HorizontalAlignment="Left" Margin="157,63,0,0" VerticalAlignment="Top" Width="26" Click="BT_Dest_Click"/>
+                </Grid>
+            </Expander>
+            <Expander Style="{StaticResource ExpanderStyle1}" Header="Copy Options"  IsExpanded="{Binding CurrentExpanded2, Converter={StaticResource ExspandedConerter}, ConverterParameter=2}">
+                <Grid Background="#FFE5E5E5" Height="96">
+                    <CheckBox x:Name="CB_Recursive" Content="Recursive" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Checked="CB_Recursive_Checked" Unchecked="CB_Recursive_UnChecked"/>
+                    <CheckBox x:Name="CB_Hidden" Content="Skip Hidden Files" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="CB_Retry" Content="Retry 10 times (defult: 5)" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="CB_OverW" Content="Overwrite" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Checked="CB_OverW_Checked" Unchecked="CB_OverW_UnChecked"/>
+
+                </Grid>
+            </Expander>
+            <Expander Style="{StaticResource ExpanderStyle1}" Header="Ownership"  IsExpanded="{Binding CurrentExpanded2, Converter={StaticResource ExspandedConerter}, ConverterParameter=3}">
+                <Grid Background="#FFE5E5E5" Height="90">
+                    <CheckBox x:Name="ChBOwner" Content="Take Ownership" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="ChBOwner_Checked" Unchecked="ChBOwner_UnChecked"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="As Whom:" VerticalAlignment="Top" RenderTransformOrigin="0.183,-0.007"/>
+                    <ComboBox x:Name="CB_Owner" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="173" IsEnabled="False"/>
+
+                </Grid>
+            </Expander>
+            <Expander Style="{StaticResource ExpanderStyle1}" Header="Permisions"  IsExpanded="{Binding CurrentExpanded2, Converter={StaticResource ExspandedConerter}, ConverterParameter=4}">
+                <Grid Background="#FFE5E5E5" Height="209"/>
+            </Expander>
+        </StackPanel>
+
+
+
+        <Button x:Name="BigRedButton" Content="Big Red Button" HorizontalAlignment="Left" Margin="307,394,0,0" VerticalAlignment="Top" Width="110" Background="#FFFB0000" Height="34" Click="Button_Click"/>
+        <ProgressBar x:Name="MainPB" HorizontalAlignment="Left" Height="16" Margin="236,234,0,0" VerticalAlignment="Top" Width="482" Foreground="Blue"/>
+        <Image Source="Images/Logo.png" HorizontalAlignment="Left" Height="63" Margin="236,10,0,0" VerticalAlignment="Top" Width="265"/>
+        <Image Source="Images/divider-line-vertical.png" HorizontalAlignment="Left" Height="160" Margin="179,147,0,0" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.513,0.5"/>
+        <RichTextBox x:Name="RTBOutput" Background="Black" Foreground="#00FF00" HorizontalAlignment="Left" Height="142" Margin="236,78,0,0" VerticalAlignment="Top" Width="482" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+        <Label Content="Totel # of objects: " HorizontalAlignment="Left" Margin="236,284,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BTExit" Content="Exit" HorizontalAlignment="Left" Margin="657,408,0,0" VerticalAlignment="Top" Width="75" Click="BTExit_Click"/>
+        <TextBlock x:Name="TBFileCount" HorizontalAlignment="Left" Margin="349,289,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="369" TextAlignment="Right"/>
+        <Label Content="# of completed Files:" HorizontalAlignment="Left" Margin="236,310,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TB_CompletedCount" HorizontalAlignment="Left" Margin="358,315,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="360" TextAlignment="Right"/>
+        <Label Content="Start Date/Time:" HorizontalAlignment="Left" Margin="236,341,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,0.308"/>
+        <TextBlock x:Name="TB_StartTime" HorizontalAlignment="Left" Margin="337,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
+        <ProgressBar x:Name="PBOverAll" HorizontalAlignment="Left" Height="16" Margin="236,255,0,0" VerticalAlignment="Top" Width="482" Background="#FFE6E6E6">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="DarkBlue" Offset="0"/>
+                    <GradientStop Color="Blue" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+
+    </Grid>
+</Window>
