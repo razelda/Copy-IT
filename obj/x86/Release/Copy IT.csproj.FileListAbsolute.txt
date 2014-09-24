@@ -1,0 +1,16 @@
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\bin\x86\Release\Copy IT.exe.config
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy IT.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\App.baml
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\MainWindow.g.cs
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\App.g.cs
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy IT_MarkupCompile.cache
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy IT_MarkupCompile.lref
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\bin\x86\Release\Copy IT.exe
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\bin\x86\Release\Copy IT.pdb
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\MainWindow.baml
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy IT.g.resources
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy_IT.Properties.Resources.resources
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy IT.csproj.GenerateResource.Cache
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy IT.exe
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\x86\Release\Copy IT.pdb

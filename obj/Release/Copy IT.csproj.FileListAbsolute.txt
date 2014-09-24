@@ -1,0 +1,8 @@
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\bin\Release\Copy IT.exe.config
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\Release\Copy IT.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\Release\App.baml
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\Release\MainWindow.g.cs
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\Release\App.g.cs
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\Release\Copy IT_MarkupCompile.cache
+C:\Users\Jonathan\documents\visual studio 2013\Projects\Copy IT\Copy IT\obj\Release\Copy IT_MarkupCompile.lref
